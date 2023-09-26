@@ -1,0 +1,38 @@
+:root{
+  --no-of-slides: 1;
+  --slides-in-view: 1;
+  --slide-width: 1500px;
+  --slide-height: 400px;
+  --iteration-time: 10s;
+}
+
+.container{
+  overflow: hidden;
+  margin-left: 20px;
+  margin-top: 32px;
+}
+
+.slider-container{
+  margin-top: 20px;
+  display: flex;
+  width: 2000px;
+  overflow: hidden;
+  animation: moveBackground var(--iteration-time) linear infinite;
+}
+
+.slider-images{
+  width: 700px;
+}
+
+.slider-images img{
+  
+}
+
+@keyframes moveBackground {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-980px);
+  }
+}
