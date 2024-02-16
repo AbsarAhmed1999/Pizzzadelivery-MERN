@@ -1,0 +1,98 @@
+.statusBox ul li span{
+    position: relative;
+    padding-left: 20px;
+}
+
+
+.statusBox ul li span::after{
+    content:"";
+    position: absolute;
+    left: -10px;
+    top: 40%;
+    background:#232323;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* ICONS */ 
+.statusBox ul li span::before{
+ 
+    font-family: "Line Awesome Free";
+    /*Font Size and weight are necessary else icon wont be visible */
+    font-size: 46px;
+    font-weight: 600;
+    position: absolute;
+    left: -90px;
+    top:50%;
+    transform: translateY(-50%);
+    color: inherit;
+    opacity: 20%;
+    
+}
+
+
+.statusBox ul li:nth-child(1) span::before{
+    content: '📋';
+}
+.statusBox ul li:nth-child(2) span::before{
+    content: '✔️';
+}
+.statusBox ul li:nth-child(3) span::before{
+    content: '🍕';
+}
+.statusBox ul li:nth-child(4) span::before{
+    content: '🚚';
+}
+.statusBox ul li:nth-child(5) span::before{
+    content: '😊';
+}   
+
+.statusBox ul li{
+    position: relative;
+}
+/* Line*/
+.statusBox ul li:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 2px;
+    height: 100%;
+    background: #232323;
+    margin-top: 10px;
+}
+/* 
+.statusBox ul li:nth-child(5) span::after {
+
+    box-shadow: 0 20px 1px 20px;
+}
+ */
+
+.statusBox ul li.stepCompleted::before{
+    background: gray;
+}
+
+/* Dots*/
+.statusBox ul li.stepCompleted span::after{
+    background: gray;
+}
+
+/*Text*/
+.statusBox ul li.stepCompleted span{
+    color: gray;
+}
+
+/*Current Status*/
+
+.statusBox ul li.current span{
+    color: orange;
+}
+
+
+.statusBox ul li.current span::after{
+    background: orange;
+}
+
